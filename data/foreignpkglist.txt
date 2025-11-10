@@ -1,0 +1,9 @@
+ags-hyprpanel-git
+google-chrome
+grimblast-git
+pwvucontrol
+python-gpustat
+rclone-browser
+wf-recorder-git
+yay
+yay-debug
