@@ -23,6 +23,7 @@ okular
 parole
 polkit-kde-agent
 pwvucontrol
+ranger
 rclone-browser
 ristretto
 sddm
