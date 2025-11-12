@@ -39,3 +39,6 @@ fi
 cp hyprpaper/config.json ~/.config/hyprpanel/config.json
 cp -r nvim .config/
 cp pacman/hooks/* /usr/share/libalpm/hooks/
+
+# TODO
+# Clone the documents folder, the wallpaper folder and the obsidian vault with rclone
