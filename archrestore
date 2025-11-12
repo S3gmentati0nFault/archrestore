@@ -1,14 +1,41 @@
+#!/usr/bin/bash
 # install yay
 echo "Installing yay..."
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
+echo "yay was correctly installed!"
 
 # Use pacman to install all the necessary packages
+echo "Installing all the pacman packages..."
 sudo pacman -S --needed - <data/pkglist.txt
+echo "All the packages were correctly installed"
 
 # Use yay to install the rest of the packages
+echo "Installing all the AUR packages..."
 yay -S --needed - <data/foreignpkglist.txt
+echo "The AUR packages were correctly installed"
+
+# Create the Project folder
+echo "Creating the Projects folder structure..."
+mkdir -p ~/Projects/ASC/Personal
+mkdir ~/Projects/ASC/Research/
+mkdir ~/Projects/External/
+mkdir ~/Projects/Personal/
 
 # Configuration of the packages
+echo "Cloning the main repository with the config files"
+git clone https://github.com/S3gmentati0nFault/config-files.git
+cd config-files
+if [ ! -d ~/.config/hypr ]; then
+  mkdir -p ~/.config/hypr
+fi
+cp hypr/hyprland.conf ~/.config/hypr/hyprland.conf
+cp hypr/hyprpaper.conf ~/.config/hypr/hyprpaper.conf
+if [ ! -d ~/.config/hyprpanel ]; then
+  mkdir -p ~/.config/hyprpanel
+fi
+cp hyprpaper/config.json ~/.config/hyprpanel/config.json
+cp -r nvim .config/
+cp pacman/hooks/* /usr/share/libalpm/hooks/
