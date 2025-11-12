@@ -1,8 +1,14 @@
 # install yay
+echo "Installing yay..."
+sudo pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
 # Use pacman to install all the necessary packages
 sudo pacman -S --needed - <data/pkglist.txt
 
 # Use yay to install the rest of the packages
+yay -S --needed - <data/foreignpkglist.txt
 
 # Configuration of the packages
