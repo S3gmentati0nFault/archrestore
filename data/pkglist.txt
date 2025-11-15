@@ -82,3 +82,4 @@ xfwm4-themes
 yay
 yay-debug
 virtualbox
+virtualbox-host-modules-arch
