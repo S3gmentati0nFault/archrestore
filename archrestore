@@ -1,7 +1,10 @@
 #!/usr/bin/bash
+# Initial update of the system
+sudo pacman -Syu --noconfirm
+
 # install yay
 echo "Installing yay..."
-sudo pacman -S --needed git base-devel
+sudo pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
@@ -12,7 +15,7 @@ done
 
 # Use pacman to install all the necessary packages
 echo "Installing all the pacman packages..."
-sudo pacman -S --needed - <"$pwd"/data/pkglist.txt
+sudo pacman -S --needed --noconfirm - <"$pwd"/data/pkglist.txt
 echo "All the packages were correctly installed"
 for i in {1..4}; do
   echo
@@ -20,7 +23,7 @@ done
 
 # Use yay to install the rest of the packages
 echo "Installing all the AUR packages..."
-yay -S --needed - <"$pwd"/data/foreignpkglist.txt
+yay -S --needed --noconfirm - <"$pwd"/data/foreignpkglist.txt
 echo "The AUR packages were correctly installed"
 for i in {1..4}; do
   echo

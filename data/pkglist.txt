@@ -1,4 +1,3 @@
-ags-hyprpanel-git
 base
 clang
 discord
@@ -79,7 +78,5 @@ xfce4-whiskermenu-plugin
 xfce4-xkb-plugin
 xfdesktop
 xfwm4-themes
-yay
-yay-debug
 virtualbox
 virtualbox-host-modules-arch
