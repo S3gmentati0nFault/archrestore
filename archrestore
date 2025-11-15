@@ -5,17 +5,26 @@ sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-echo "yay was correctly installed!\n\n\n\n"
+echo "yay was correctly installed!"
+for i in {1..4}; do
+  echo
+done
 
 # Use pacman to install all the necessary packages
 echo "Installing all the pacman packages..."
-sudo pacman -S --needed - <./data/pkglist.txt
-echo "All the packages were correctly installed\n\n\n\n"
+sudo pacman -S --needed - <"$pwd"/data/pkglist.txt
+echo "All the packages were correctly installed"
+for i in {1..4}; do
+  echo
+done
 
 # Use yay to install the rest of the packages
 echo "Installing all the AUR packages..."
-yay -S --needed - <./data/foreignpkglist.txt
-echo "The AUR packages were correctly installed\n\n\n\n"
+yay -S --needed - <"$pwd"/data/foreignpkglist.txt
+echo "The AUR packages were correctly installed"
+for i in {1..4}; do
+  echo
+done
 
 # Create the Project folder
 echo "Creating the Projects folder structure..."
@@ -23,7 +32,10 @@ mkdir -p ~/Projects/ASC/Personal
 mkdir ~/Projects/ASC/Research/
 mkdir ~/Projects/External/
 mkdir ~/Projects/Personal/
-echo "The folder structure was correctly created\n\n\n\n"
+echo "The folder structure was correctly created"
+for i in {1..4}; do
+  echo
+done
 
 # Configuration of the packages
 echo "Cloning the main repository with the config files"
@@ -40,7 +52,7 @@ fi
 cp hyprpaper/config.json ~/.config/hyprpanel/config.json
 cp -r nvim .config/
 cp pacman/hooks/* /usr/share/libalpm/hooks/
-echo "Setup complete\n\n\n\n"
+echo "Setup complete"
 
 # TODO
 # Clone the documents folder, the wallpaper folder and the obsidian vault with rclone
