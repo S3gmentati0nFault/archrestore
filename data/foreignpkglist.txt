@@ -5,5 +5,3 @@ pwvucontrol
 python-gpustat
 rclone-browser
 wf-recorder-git
-yay
-yay-debug

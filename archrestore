@@ -2,6 +2,8 @@
 # Initial update of the system
 sudo pacman -Syu --noconfirm
 
+wf=$(pwd)
+
 # install yay
 echo "Installing yay..."
 sudo pacman -S --needed --noconfirm git base-devel
@@ -12,6 +14,7 @@ echo "yay was correctly installed!"
 for i in {1..4}; do
   echo
 done
+cd $wf
 
 # Use pacman to install all the necessary packages
 echo "Installing all the pacman packages..."
@@ -28,6 +31,7 @@ echo "The AUR packages were correctly installed"
 for i in {1..4}; do
   echo
 done
+cd $wf
 
 # Create the Project folder
 echo "Creating the Projects folder structure..."
