@@ -80,3 +80,4 @@ xfdesktop
 xfwm4-themes
 yay
 yay-debug
+virtualbox
