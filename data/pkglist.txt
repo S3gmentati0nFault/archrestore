@@ -5,7 +5,6 @@ docker
 dunst
 firefox
 gdb
-google-chrome
 grub
 htop
 hyprpaper
@@ -21,9 +20,7 @@ obsidian
 okular
 parole
 polkit-kde-agent
-pwvucontrol
 ranger
-rclone-browser
 ristretto
 sddm
 smartmontools
